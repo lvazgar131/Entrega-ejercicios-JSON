@@ -1,0 +1,8 @@
+{
+    "Número": 1,
+    "Cadena": "Hola mundo",
+    "Booleano": true,
+    "Matriz": [1,2,3,4,5],
+    "Objeto": {"Alumnos": 2,"Notas": 5},
+    "Nulo": null
+}

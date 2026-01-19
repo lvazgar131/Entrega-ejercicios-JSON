@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercico 4 JSON</title>
+</head>
+<body>
+    <h1 id="demo">demo</h1>
+</body>
+<script>
+    const objeto = {
+        "nombre":"Mario",
+        "apellidos": "Sáncho López",
+        "edad":26,
+        "curso": "DAW2",
+        "asignatura":"DWEC",
+        "ciudad":"El Puerto de Santa María"
+    };
+
+    const objeto_JSON = JSON.stringify(objeto);
+    // window.location = "demo_json.php?x=" + objeto_JSON;
+
+    localStorage.setItem("myJSON",objeto_JSON);
+
+    const JSON_recuperado = localStorage.getItem("myJSON");
+    const nombre_JSON = JSON.parse(JSON_recuperado);
+    document.getElementById("demo").textContent = nombre_JSON["nombre"];
+
+</script>
+</html>

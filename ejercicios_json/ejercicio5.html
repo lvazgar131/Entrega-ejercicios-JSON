@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+    <h1 id="datos_alumno">Datos del alumno</h1>
+</body>
+<script>
+    const JSON_ejercicio = 
+    `
+        {
+            "nombre":"Mario",
+            "apellidos": "Sáncho López",
+            "nacido": "26-11-1986",
+            "curso": "DAW2",
+            "asignatura":"DWEC",
+            "ciudad":"El Puerto de Santa María"
+        }
+    `
+    const JSON_js = JSON.parse(JSON_ejercicio);
+
+    const JSON_lista = Object.values(JSON_js);
+
+    document.getElementById("datos_alumno").textContent = JSON.stringify(JSON_lista);
+
+</script>
+</html>
